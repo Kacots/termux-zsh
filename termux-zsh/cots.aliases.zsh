@@ -16,3 +16,22 @@ alias ...="cd ../../"
 alias vv="python3 -m venv $PYTHON_VENV_NAME"
 alias vrun="source $PYTHON_VENV_NAME/bin/activate"
 
+# git aliases
+alias g="git"
+alias gi="git init"
+alias gi.="git init ."
+alias ga="git add"
+alias gaA="git add -A"
+alias ga.="git add ."
+alias gcl="git clone"
+alias gb="git branch"
+alias gba="git branch -a"
+alias gco="git checkout"
+alias gst="git status"
+alias gcm="git commit -m"
+alias gr="git remote"
+alias gra="git remote add"
+alias gp="git push"
+alias gpu="git push -u"
+
+
