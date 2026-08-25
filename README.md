@@ -1,1 +1,11 @@
-belum di push ke github, harap setelah membaca ini paket harus di push ke github
+#### contoh penggunaan
+### update dan install depedensi
+```bash
+pkg update && pkg upgrade -y
+pkg install git zsh
+git clone https://github.com/Kacots/termux-zsh.git
+
+cd termux-zsh
+chmod +x install
+./install
+```
