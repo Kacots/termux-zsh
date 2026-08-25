@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+echo "[+] Updating package"
+# update dan upgrade paket termux
+pkg update && pkg upgrade -y
+
+echo "[+] Installing dependencies"
+# instal dependensi
+pkg install git zsh
+
+# buat struktur folder
+rm -rf ~/.zsh-plugins ~/.termux-zsh
+mkdir -p ~/.termux-zsh
+mkdir -p ~/.zsh-plugins
+
+cp -r ./termux-zsh/. ~/.termux-zsh
+
+# instal plugin zsh dan memasang nya
+#echo "[+] Installing zsh plugins"
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-plugins/zsh-syntax-highlighting
+
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh-plugins/zsh-autosuggestions
+
+cat > ~/.zshrc <<EOF
+export PATH="$PATH:~/.local/bin"
+source ~/.termux-zsh/termux_zsh.zsh
+EOF
+
+chsh -s zsh
+
+
+
+
+
+
+
+
